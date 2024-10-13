@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shara Topup</title>
+    <link href="style.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1a1a2e;
+        }
+
+        .header img {
+            height: 40px;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 20px;
+            background-color: #2e2e4e;
+        }
+
+        .banner img {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .banner h1 {
+            font-size: 24px;
+            margin: 10px 0;
+        }
+
+        .banner p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .tabs a {
+            text-decoration: none;
+        }
+
+        .tabs button {
+            background-color: #2e2e4e;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .tabs button.active {
+            background-color: #007bff;
+        }
+
+        .tabs button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 20px;
+        }
+
+        .app-card {
+            background-color: #2e2e4e;
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+
+        .app-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .app-card img {
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .app-card h3 {
+            font-size: 16px;
+            margin: 10px 0;
+        }
+
+        .app-card p {
+            font-size: 14px;
+            margin: 10px 0;
+        }
+
+        .app-card .status {
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            padding: 5px 10px;
+            display: inline-block;
+        }
+
+        /* Animasi Fade In untuk produk */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+<header>
+    <div class="header">
+        <img alt="Logo" height="40" src="https://storage.googleapis.com/a1aa/image/9x7WkhNjMC40PpPb2Lp9m3TTkdQPm8fkW2JofcnycefSOKWOB.jpg" width="40"/>
+    </div>
+</header>
+
+<div class="banner">
+    <h1>Selamat Datang Di Janz Store</h1>
+    <p>Selamat datang di JanzStore, solusi lengkap untuk kebutuhan digital Anda! Kami menyediakan layanan premium mulai dari hosting dan domain berkualitas, backup server yang aman, hingga suntik sosmed dan top-up game yang cepat dan terpercaya</p>
+</div>
+
+<div class="tabs">
+    <a href="aplikasi.html"><button>Aplikasi Premium</button></a>
+    <a href="topup.html"><button class="active">Topup Game</button></a>
+</div>
+
+<div class="app-grid">
+    <!-- Daftar produk topup -->
+    <a href="ff.html" class="app-card fade-in">
+        <img alt="Free Fire" src="../img/efef.jpeg"/>
+        <div class="status">Tersedia</div>
+        <h3>Free Fire</h3>
+        <h6>Topup Diamond</h6>
+    </a>
+    <a href="mobilelegend.html" class="app-card fade-in">
+        <img alt="Mobile Legend" src="../img/ml.jpeg"/>
+        <div class="status">Tersedia</div>
+        <h3>Mobile Legend</h3>
+        <h6>Topup Diamond</h6>
+    </a>
+
+<script>
+    // Animasi fade in untuk produk saat halaman dimuat
+    window.onload = function() {
+        document.querySelectorAll('.app-card').forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add('fade-in');
+            }, index * 200);
+        });
+    };
+</script>
+</body>
+</html>

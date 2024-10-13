@@ -1,0 +1,209 @@
+<html>
+<head>
+  <title>JanzStore - Vision</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Arial', sans-serif;
+      background-color: #1a1a2e;
+      color: #fff;
+      opacity: 0;
+      animation: fadeIn 1s forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .header {
+      padding: 10px 20px;
+      background-color: #1a1a2e;
+      color: #fff;
+      text-align: center;
+    }
+
+    .product-card {
+      background-color: #2e2e4e;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+      box-shadow: 0 4px 20px rgba(255, 255, 255, 0.2);
+    }
+
+    .product-card img {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 150px;
+      height: 150px;
+      margin-bottom: 20px;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover img {
+      transform: rotate(10deg) scale(1.1);
+    }
+
+    .badge, .badge-terlaris {
+      padding: 3px 7px;
+      border-radius: 20px;
+      font-size: 15px;
+      margin-top: 10px;
+      display: inline-block;
+    }
+    
+    .badge-tersedia{
+      padding: 3px 7px;
+      border-radius: 20px;
+      font-size: 15px;
+      margin-top: 10px;
+      display: inline-block;
+      background-color: green;
+      color: #fff;
+    }
+
+    .badge { background-color: #007bff; color: #fff; }
+    .badge-terlaris { background-color: #FFA500; color: #fff; }
+
+    .title {
+      font-size: 13px;
+      font-weight: bold;
+      margin-top: 10px;
+    }
+
+    .details {
+      color: #aaa;
+      font-size: 15px;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    .subscription-card {
+      background-color: #1e2a47;
+      border-radius: 10px;
+      padding: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      cursor: pointer;
+      margin: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .subscription-card:hover {
+      background-color: #354e6e;
+    }
+
+    .price .original-price {
+      color: #ff4d4d;
+      font-size: 14px;
+      text-decoration: line-through;
+    }
+
+    .price .discounted-price {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .back-button {
+      margin-top: 20px;
+      display: block;
+      width: 95%;
+      text-align: center;
+      padding: 10px;
+      background-color: #007bff;
+      color: #fff;
+      border-radius: 5px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .back-button:hover {
+      background-color: #0056b3;
+    }
+    
+    .container .title1 {
+      font-size: 30px;
+      font-weight: bold;
+      margin-top: 10px;
+    }    
+  </style>
+  <script>
+    function openWhatsApp(id) {
+      var productName = document.getElementById("title" + id).innerText;
+      var price = document.getElementById("price" + id).innerText;
+      var currentDate = new Date().toLocaleDateString();
+
+      var message = `🛍 *FORMAT PEMBELIAN* 🛍
+      
+🔮 PRODUK : ${productName}
+💵 HARGA : ${price}
+⏰ TANGGAL : ${currentDate}
+
+Harap Tunggu Balasan Dari Admin`;
+
+      var url = "https://wa.me/6289676753517?text=" + encodeURIComponent(message);
+      window.open(url, "_blank");
+    }
+  </script>
+</head>
+<body>
+  <div class="header">
+    <h4>JanzStore</h4>
+  </div>
+  <div class="container">
+    <!-- Product Image and Info -->
+    <div class="product-card">
+      <img alt="Product Image" src="../img/vison.png"/>
+      <div class="badge">Aplikasi Premium</div>
+      <div class="badge-tersedia">Produk Tersedia</div>
+      <div class="badge-terlaris">Terlaris🔥</div>
+      <div class="title1">Vision+</div>
+      <div class="details">
+        <p>- AKUN DARI ADMIN</p>
+        <p>- GARANSI FULL</p>
+        <p>- LEGAL 100%</p>
+        <p>- WAJIB MEMATUHI SnK</p>
+      </div>
+    </div>
+
+    <!-- Price List for Sharing Versions -->
+    <div class="subscription-card" onclick="openWhatsApp(1)">
+      <div class="details">
+        <div class="title" id="title1">Vision+ - 1 Bulan Private</div>
+      </div>
+      <div class="price">
+        <div class="original-price">Rp83.000</div>
+        <div class="discounted-price" id="price1">Rp30.000</div>
+      </div>
+    </div>
+
+    <div class="subscription-card" onclick="openWhatsApp(1)">
+      <div class="details">
+        <div class="title" id="title1">Vision+ - 1 Bulan Sharing</div>
+      </div>
+      <div class="price">
+        <div class="original-price">Rp119.000</div>
+        <div class="discounted-price" id="price1">Rp25.000</div>
+      </div>
+    </div>
+    <!-- Back Button -->
+    <a href="aplikasi.html" class="back-button">Kembali ke Menu</a>
+  </div>
+</body>
+</html>

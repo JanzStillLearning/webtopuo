@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shara Apps - Aplikasi Premium</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #1a1a2e;
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        /* Animasi Fade In untuk produk */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Animasi Fade Out untuk klik tombol */
+        @keyframes fadeOut {
+            0% {
+                opacity: 1;
+            }
+            100% {
+                opacity: 0;
+            }
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #1a1a2e;
+        }
+
+        .header img {
+            height: 40px;
+        }
+
+        .banner {
+            text-align: center;
+            padding: 20px;
+            background-color: #2e2e4e;
+        }
+
+        .banner img {
+            width: 100%;
+            max-width: 600px;
+        }
+
+        .banner h1 {
+            font-size: 28px;
+            margin: 10px 0;
+        }
+
+        .banner p {
+            font-size: 14px;
+            margin: 10px 0;
+            color: #A9A9A9;
+        }
+
+        .tabs {
+            display: flex;
+            justify-content: center;
+            margin: 20px 0;
+        }
+
+        .tabs a {
+            text-decoration: none;
+        }
+
+        .tabs button {
+            background-color: #2e2e4e;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 5px;
+            transition: background-color 0.3s ease, transform 0.3s ease;
+        }
+
+        .tabs button.active {
+            background-color: #007bff;
+        }
+
+        .tabs button:hover {
+            background-color: #0056b3;
+            transform: scale(1.05);
+        }
+
+        .tabs button:focus {
+            animation: fadeOut 0.5s forwards;
+        }
+
+        .app-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 10px;
+            padding: 10px;
+        }
+
+        .app-card {
+            background-color: #2e2e4e;
+            border-radius: 20px;
+            padding: 10px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            text-decoration: none;
+            color: white;
+        }
+
+        .app-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .app-card img {
+            width: 70%;
+            border-radius:100px;
+            box-shadow: 0 0 0 15px #fff;
+        }
+
+        .app-card h3 {
+            margin: 10px 0;
+        }
+
+        .app-card h6 {
+            margin: 5px 0;
+            color: #A9A9A9;
+        }
+
+        .app-card .status {
+            background-color: #007bff;
+            color: #fff;
+            border-radius: 5px;
+            padding: 5px 10px;
+            display: inline-block;
+        }
+        
+        .about-store {
+            background-color: #2e2e4e;
+            padding: 40px 20px;
+            color: white;
+            margin-top: 40px;
+            border-radius: 10px;
+            text-align: center;
+        }
+
+.about-store h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.about-store p {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.about-store h3 {
+    font-size: 22px;
+    margin-bottom: 15px;
+}
+
+.about-store ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.about-store ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+.social-links {
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 10px;
+    font-size: 24px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #007bff;
+}
+    </style>
+</head>
+<body>
+<header>
+    <div class="header">
+        <h3>JanzStore</h3>
+    </div>
+</header>
+
+<div class="banner">
+    <h1>Selamat Datang Di Janz Store</h1>
+    <p>Selamat datang di JanzStore, solusi lengkap untuk kebutuhan digital Anda! Kami menyediakan layanan premium mulai dari hosting dan domain berkualitas, backup server yang aman, hingga suntik sosmed dan top-up game yang cepat dan terpercaya</p>
+</div>
+
+<div class="tabs">
+    <a href="aplikasi.html"><button class="active">App Premium</button></a>
+    <a href="topup.html"><button>Topup Game</button></a>
+</div>
+
+<div class="app-grid">
+    <a href="vision.html" class="app-card fade-in">
+        <img alt="Vision Plus" src="
+        ../img/vison.png"/>
+        <div class="status">Tersedia</div>
+        <h3>Vision+</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    <a href="alight.html" class="app-card fade-in">
+        <img alt="Alight Motion" src="
+        ../img/am.png"/>
+        <div class="status">Tersedia</div>
+        <h3>Alight Motion</h3>
+        <h6>Aplikasi Premium</h6>
+        
+    <a href="bstation.html" class="app-card fade-in">
+        <img alt="BSTATION" src="../img/bstation.png"/>
+        <div class="status">Tersedia</div>
+        <h3>Bstation</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    
+    <a href="vidio.html" class="app-card fade-in">
+        <img alt="vidio" src="../img/vidio.png"/>
+        <div class="status">Tersedia</div>
+        <h3>Vidio</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    
+    <a href="wetv.html" class="app-card fade-in">
+        <img alt="WeTV" src="../img/wetv.png"/>
+        <div class="status">Tersedia</div>
+        <h3>WeTV</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    
+    <a href="disney.html" class="app-card fade-in">
+        <img alt="Disney" src="../img/disney.jpeg"/>
+        <div class="status">Tersedia</div>
+        <h3>Disney Hotstar</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    
+    <a href="viu.html" class="app-card fade-in">
+        <img alt="viu" src="../img/viu.png"/>
+        <div class="status">Tersedia</div>
+        <h3>Viu</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    <a href="loklok.html" class="app-card fade-in">
+        <img alt="LokLok" src="../img/loklok.png"/>
+        <div class="status">Tersedia</div>
+        <h3>Lok Lok</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    <a href="youtube.html" class="app-card fade-in">
+        <img alt="Youtube" src="../img/youtube.png"/>
+        <div class="status">Tersedia</div>
+        <h3>Youtube</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    <a href="netflix.html" class="app-card fade-in">
+        <img alt="Netflix" src="../img/netflix.png"/>
+        <div class="status">Tersedia</div>
+        <h3>Netflix</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    <a href="prime.html" class="app-card fade-in">
+        <img alt="Prime Video" src="../img/prime.png"/>
+        <div class="status">Tersedia</div>
+        <h3>Prime Video</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    <a href="canva.html" class="app-card fade-in">
+        <img alt="Canva" src="../img/canva.jpeg"/>
+        <div class="status">Tersedia</div>
+        <h3>Canva</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    <a href="getcontact.html" class="app-card fade-in">
+        <img alt="getcontact" src="../img/get.png"/>
+        <div class="status">Tersedia</div>
+        <h3>GetContact</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    <a href="hbo.html" class="app-card fade-in">
+        <img alt="HBO" src="../img/hbo.png"/>
+        <div class="status">Tersedia</div>
+        <h3>HBO GO</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+    <a href="youku.html" class="app-card fade-in">
+        <img alt="youku" src="../img/youku.png"/>
+        <div class="status">Tersedia</div>
+        <h3>Youku</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+
+    <a href="spotify.html" class="app-card fade-in">
+        <img alt="spotify" src="../img/spotify.png"/>
+        <div class="status">Tersedia</div>
+        <h3>Spotify</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+
+    <a href="drakor.html" class="app-card fade-in">
+        <img alt="drakorid" src="../img/drakorid.jpeg"/>
+        <div class="status">Tersedia</div>
+        <h3>Drakor ID</h3>
+        <h6>Aplikasi Premium</h6>
+    </a>
+</div>
+
+<div class="about-store">
+    <h2>Tentang Janz Store</h2>
+    <p>Janz Store adalah toko online yang berfokus menyediakan berbagai aplikasi premium dan layanan top-up game dengan harga terjangkau, cepat, dan aman. Kami berkomitmen untuk memberikan pengalaman terbaik bagi pelanggan dengan proses transaksi yang cepat dan dukungan pelanggan yang responsif.</p>
+
+    <h3>Misi Kami</h3>
+    <p>Misi kami adalah memberikan akses kepada pengguna ke aplikasi dan layanan terbaik di industri dengan harga yang kompetitif, memastikan bahwa setiap transaksi aman, dan pelanggan selalu mendapatkan produk yang mereka butuhkan dengan mudah.</p>
+
+    <h3>Layanan Kami</h3>
+    <ul>
+        <li>Aplikasi Premium: Menyediakan akses ke aplikasi premium populer seperti <strong>Vision Plus</strong>, <strong>Alight Motion</strong>, dan <strong>WeTV</strong>.</li>
+        <li>Top-Up Game: Menyediakan layanan top-up cepat dan aman untuk berbagai game populer dengan harga terjangkau.</li>
+        <li>Dukungan Pelanggan: Tim kami siap membantu kapan saja untuk memastikan setiap pelanggan mendapatkan layanan terbaik.</li>
+    </ul>
+
+    <h3>Hubungi Kami</h3>
+    <p>Jika Anda memiliki pertanyaan atau memerlukan bantuan, jangan ragu untuk menghubungi kami di:</p>
+    <p><i class="fas fa-phone"></i> +62 896-7675-3517</p>
+
+    <div class="social-links">
+        <a href="wa.me/6289676753517"><i class="fab fa-whatsapp"></i></a>
+        <a href="https://www.instagram.com/janzstoreid"><i class="fab fa-instagram"></i></a>
+    </div>
+</div>
+
+<script>
+    // Tambahkan animasi fade out saat klik pada tombol tab
+    document.querySelectorAll('.tabs button').forEach(button => {
+        button.addEventListener('click', function() {
+            this.style.animation = 'fadeOut 0.5s forwards';
+        });
+    });
+
+    // Animasi fade in untuk produk saat halaman dimuat
+    window.onload = function() {
+        document.querySelectorAll('.app-card').forEach((card, index) => {
+            setTimeout(() => {
+                card.classList.add('fade-in');
+            }, index * 200);
+        });
+    };
+</script>
+</body>
+</html>
